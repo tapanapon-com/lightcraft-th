@@ -2,7 +2,7 @@
 
 โครงการเตรียมรุ่นภาษาไทยอิสระของ [LightCraft โดย storytold / ArtCraft](https://github.com/storytold/lightcraft) ในชุด [วันละ Craft / One Per Craft](https://github.com/tapanapon-com/one-per-craft) เอนจินและคุณสมบัติหลักเป็นผลงานของผู้พัฒนาต้นฉบับ
 
-[ดาวน์โหลดต้นฉบับ v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) · [คู่มือ Mac](docs/install-macos.md) · [คู่มือ Windows](docs/install-windows.md) · [Version Log](CHANGELOG.md) · [English](#english)
+[ดาวน์โหลดต้นฉบับ v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) · [คู่มือ Mac](docs/install-macos.md) · [คู่มือ Windows](docs/install-windows.md) · [Version Log](docs/version-log.md) · [English](#english)
 
 ## สถานะรุ่นไทย
 
@@ -13,7 +13,7 @@
 | Release ต้นฉบับที่ตรวจ | [v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) |
 | แพ็กเกจภาษาไทยของ Tapanapon | ยังไม่เผยแพร่ |
 | เนื้อหา repo นี้ | เอกสารและข้อมูลอ้างอิงต้นทาง |
-| ตรวจข้อมูลล่าสุด | 07/11/2026 10:59 ICT |
+| ตรวจ Release ล่าสุด | 07/11/2026 22:57 ICT |
 
 ลิงก์ดาวน์โหลดด้านบนเป็นไฟล์ต้นฉบับของ storytold / ArtCraft ไม่ใช่ตัวติดตั้ง TH และอาจมีภาษาที่รองรับต่างกันตามรุ่น อ่าน [ข้อมูลต้นทาง](UPSTREAM.md) และ [สถานะคำแปล](docs/localization-th.md)
 
@@ -58,7 +58,7 @@
 - แก้การเลือกโปรไฟล์เลนส์เมื่อต่อ teleconverter ไม่ให้ใช้โปรไฟล์ของเลนส์เดี่ยวผิดชุด — [ต้นทาง](https://github.com/storytold/lightcraft/pull/3660)
 - ปรับการครอปหลังแก้ความคลาดเลนส์ให้อยู่ภายในภาพที่แก้แล้ว — [ต้นทาง](https://github.com/storytold/lightcraft/pull/3012)
 
-อ่าน [CHANGELOG](CHANGELOG.md) และ [Version Log บนเว็บไซต์](https://tapanapon.com/one-per-craft/versions#lightcraft) การเปลี่ยนแปลงข้างต้นยังไม่ได้ถูกอ้างว่าเข้าแพ็กเกจ TH แล้ว
+อ่าน [CHANGELOG](CHANGELOG.md) และ [Version Log ต้นฉบับ](docs/version-log.md) การเปลี่ยนแปลงข้างต้นยังไม่ได้ถูกอ้างว่าเข้าแพ็กเกจ TH แล้ว
 
 ## ขอบเขตคำแปลและการตรวจสอบ
 
