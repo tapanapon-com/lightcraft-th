@@ -1,0 +1,37 @@
+{
+  "id": "lightcraft",
+  "name": "LightCraft",
+  "repository": "https://github.com/tapanapon-com/lightcraft-th",
+  "status": "documentation-only",
+  "containsApplicationSource": false,
+  "thaiVersion": null,
+  "thaiArticle": null,
+  "upstream": {
+    "repository": "https://github.com/storytold/lightcraft",
+    "releaseTag": "v0.19.0",
+    "releaseUrl": "https://github.com/storytold/lightcraft/releases/tag/v0.19.0",
+    "publishedAt": "2026-11-06T20:21:50Z",
+    "checkedAt": "2026-11-07T03:59:09.433727+00:00",
+    "sourceCommit": "8a0b91a95c30618b690374dd2db9d0684ebc9b23",
+    "sourceVersion": "0.18.0",
+    "macDownload": "https://github.com/storytold/lightcraft/releases/download/v0.19.0/lightcraft-0.19.0-macos-universal.dmg",
+    "windowsDownload": "https://github.com/storytold/lightcraft/releases/download/v0.19.0/lightcraft-0.19.0-windows-x64.msi",
+    "portableDownload": "https://github.com/storytold/lightcraft/releases/download/v0.19.0/lightcraft-0.19.0-windows-x64-portable.zip",
+    "checksums": "https://github.com/storytold/lightcraft/releases/download/v0.19.0/SHA256SUMS.txt",
+    "changes": [
+      {
+        "text": "ใช้ไลบรารี craftlib สำหรับการอ่านไฟล์ CRW",
+        "source": "https://github.com/storytold/lightcraft/pull/3503"
+      },
+      {
+        "text": "แก้การเลือกโปรไฟล์เลนส์เมื่อต่อ teleconverter ไม่ให้ใช้โปรไฟล์ของเลนส์เดี่ยวผิดชุด",
+        "source": "https://github.com/storytold/lightcraft/pull/3660"
+      },
+      {
+        "text": "ปรับการครอปหลังแก้ความคลาดเลนส์ให้อยู่ภายในภาพที่แก้แล้ว",
+        "source": "https://github.com/storytold/lightcraft/pull/3012"
+      }
+    ]
+  },
+  "versionLog": "https://tapanapon.com/one-per-craft/versions#lightcraft"
+}
