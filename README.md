@@ -79,7 +79,7 @@ LightCraft TH is an independent Thai-edition preparation project for [LightCraft
 
 ### Features and workflow
 
-จัดคลังภาพ พัฒนาไฟล์ RAW และปรับแต่งภาพถ่าย. See the upstream README for supported workflows and limitations. Source capabilities are not a claim of completed Thai localization.
+Organize a photo library, develop RAW files and export photographs. See the upstream README for supported workflows and limitations. Source capabilities are not a claim of completed Thai localization.
 
 ### Downloads and installation
 
