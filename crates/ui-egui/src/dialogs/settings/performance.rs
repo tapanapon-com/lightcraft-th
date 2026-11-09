@@ -208,21 +208,27 @@ fn background_prep(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens) {
     }
 }
 
-/// Where this library keeps its smart previews (the offline-editing proxies, which can be large):
-/// the effective folder, what is in it, and choosing another one.
+/// Cached location reads keep the settings panel from scanning a large folder each frame.
 #[cfg(not(target_arch = "wasm32"))]
-fn smart_previews(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens) {
+fn smart_previews_location(app: &mut LightcraftApp, ui: &mut egui::Ui, cache: egui::Id) -> Value {
     // listing a big folder every frame would be slow: refresh every 2 s and after a change
-    let cache = egui::Id::unique("smart-location");
     let now = ui.input(|i| i.time);
-    let loc: Value = match ui.data(|d| d.get_temp::<(f64, Value)>(cache)) {
+    match ui.data(|d| d.get_temp::<(f64, Value)>(cache)) {
         Some((at, v)) if now - at < 2.0 => v,
         _ => {
             let v = app.run("library.smartPreviewsLocation", json!({})).unwrap_or(Value::Null);
             ui.data_mut(|d| d.insert_temp(cache, (now, v.clone())));
             v
         }
-    };
+    }
+}
+
+/// Where this library keeps its smart previews (the offline-editing proxies, which can be large):
+/// the effective folder, what is in it, and choosing another one.
+#[cfg(not(target_arch = "wasm32"))]
+fn smart_previews(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens) {
+    let cache = egui::Id::unique("smart-location");
+    let loc = smart_previews_location(app, ui, cache);
     if loc.is_null() {
         return;
     }
