@@ -16,7 +16,7 @@ jobs:
       CARGO_BUILD_JOBS: '2'
       CARGO_INCREMENTAL: '0'
       CRAFT_FONTS_REQUIRED: '1'
-      LIGHTCRAFT_VERSION: 0.19.0-th.1
+      LIGHTCRAFT_VERSION: 0.20.0-th.1
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       - uses: storytold/craft-common-actions/actions/checkout-craft-fonts@main
@@ -46,7 +46,7 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
           $version = & ./target/x86_64-pc-windows-msvc/release/lightcraft-cli.exe --version
-          if ($LASTEXITCODE -ne 0 -or -not $version.Contains('0.19.0-th.1')) { throw "Unexpected native CLI version: $version" }
+          if ($LASTEXITCODE -ne 0 -or -not $version.Contains('0.20.0-th.1')) { throw "Unexpected native CLI version: $version" }
           python scripts/thai/verify_mcp.py ./target/x86_64-pc-windows-msvc/release/lightcraft-cli.exe dist/release/mcp-windows-x64.json
           if ($LASTEXITCODE -ne 0) { throw "MCP validation failed" }
           if (Test-Path packaging/windows/test-install-policy.ps1) {
@@ -58,7 +58,7 @@ jobs:
           } | Set-Content -Encoding ascii dist/release/SHA256SUMS-windows-x64.txt
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: lightcraft-th-0.19.0-th.1-windows-x64
+          name: lightcraft-th-0.20.0-th.1-windows-x64
           path: |
             dist/release/*.msi
             dist/release/*portable.zip
