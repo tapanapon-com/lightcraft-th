@@ -19,6 +19,7 @@ pub const LANGUAGE_COMMANDS: &[UiCommand] = &[
     ("app.language.vietnamese", crate::i18n::Locale::Vi.name(), None, "Edit>Language"),
     ("app.language.russian", crate::i18n::Locale::Ru.name(), None, "Edit>Language"),
     ("app.language.ukrainian", crate::i18n::Locale::Uk.name(), None, "Edit>Language"),
+    ("app.language.thai", crate::i18n::Locale::Th.name(), None, "Edit>Language"),
     ("app.language.georgian", crate::i18n::Locale::Ka.name(), None, "Edit>Language"),
     ("app.language.japanese", crate::i18n::Locale::Ja.name(), None, "Edit>Language"),
     ("app.language.simplifiedChinese", crate::i18n::Locale::ZhHans.name(), None, "Edit>Language"),
@@ -35,6 +36,7 @@ pub fn ui_commands() -> impl Iterator<Item = &'static UiCommand> {
 /// through here, so the menu, the settings row and the control channel agree on the mapping.
 pub fn language_from_command(id: &str) -> Option<crate::i18n::Locale> {
     match id {
+        "app.language.thai" => Some(crate::i18n::Locale::Th),
         "app.language.english" => Some(crate::i18n::Locale::En),
         "app.language.simplifiedChinese" => Some(crate::i18n::Locale::ZhHans),
         "app.language.traditionalChinese" => Some(crate::i18n::Locale::ZhHant),

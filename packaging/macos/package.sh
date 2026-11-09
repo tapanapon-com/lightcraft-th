@@ -121,6 +121,8 @@ echo "==> assembling $APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 # Executable and icon carry the display name (CFBundleExecutable / CFBundleIconFile).
 cp "$WORK/bin/lightcraft" "$APP/Contents/MacOS/LightCraft"
+# Thai packages include the headless CLI for local MCP clients.
+cp "$WORK/bin/lightcraft-cli" "$APP/Contents/MacOS/lightcraft-cli"
 cp "$ROOT/assets/app-icon/lightcraft.icns" "$APP/Contents/Resources/LightCraft.icns"
 sed -e "s/@VERSION@/$VERSION/g" -e "s/@SHORT_VERSION@/$SHORT_VERSION/g" \
   -e "s/@BUILD_SHA@/${LIGHTCRAFT_BUILD_SHA:-unknown}/g" \
@@ -136,7 +138,8 @@ copy_docs "$APP/Contents/Resources/Licenses"
 xattr -cr "$APP"
 
 # Sign inside-out: nested code first, then the bundle itself (no --deep on the final signature).
-# Today the only nested code is the main executable; frameworks/helpers would be signed here too.
+# Sign both bundled executables before the outer application bundle.
+sign --options runtime --entitlements "$HERE/entitlements.plist" "$APP/Contents/MacOS/lightcraft-cli"
 sign --options runtime --entitlements "$HERE/entitlements.plist" "$APP/Contents/MacOS/LightCraft"
 sign --options runtime --entitlements "$HERE/entitlements.plist" "$APP"
 codesign --verify --strict --deep --verbose=2 "$APP"

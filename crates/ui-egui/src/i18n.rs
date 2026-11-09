@@ -120,6 +120,7 @@ macro_rules! language_table {
 // catalog (`locales/<code>.json`).
 language_table! {
     En, "en";
+    Th, "th", "ไทย", "Thai", include_str!("../locales/th.json");
     ZhHans, "zh-hans", "简体中文", "Hans", include_str!("../locales/zh-hans.json");
     ZhHant, "zh-hant", "繁體中文（台灣）", "Hant", include_str!("../locales/zh-hant.json");
     Ja, "ja", "日本語", "Jpan", include_str!("../locales/ja.json");

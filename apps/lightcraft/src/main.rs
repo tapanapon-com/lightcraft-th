@@ -219,6 +219,8 @@ impl eframe::App for App {
 const EXIT_WAIT: std::time::Duration = std::time::Duration::from_secs(2);
 
 fn main() -> eframe::Result {
+    // New desktop profiles use Thai; saved preferences and LIGHTCRAFT_LANGUAGE still win.
+    lightcraft_ui_egui::i18n::set_default_language(lightcraft_ui_egui::i18n::Locale::Th);
     // Windows: the update helper is a copy of this program started with `--finish-update`.
     #[cfg(windows)]
     if let Some(result) = craft_update::self_update::finish(&lightcraft_ui_egui::UPDATE_APP, &std::env::args_os().skip(1).collect::<Vec<_>>()) {

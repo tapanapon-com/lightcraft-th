@@ -1,11 +1,6 @@
-<p align="center">
-  <a href="https://getartcraft.com/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/brand/artcraft-logo-white.svg">
-      <img alt="ArtCraft" src="docs/brand/artcraft-logo.svg" width="200">
-    </picture>
-  </a>
-</p>
+> Upstream README preserved for reference, with trademark image headers omitted for this modified distribution. [Original v0.19.0 README](https://github.com/storytold/lightcraft/blob/16636c45a63bff3065a6fd31aecc22a6fc15ca53/README.md).
+
+
 
 
 <p align="center">
@@ -717,7 +712,7 @@ part of this repository and LightCraft, under [`docs/brand/LICENSE-brand.txt`](d
 Forks and modified versions must remove them.
 
 <p align="center">
-  <a href="https://getartcraft.com/"><img alt="ArtCraft" src="docs/brand/artcraft-mark.svg" width="28"></a><br>
+
   <sub>Made by the <a href="https://getartcraft.com/">ArtCraft</a> team and community.</sub>
 </p>
 

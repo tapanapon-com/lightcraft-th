@@ -6,7 +6,8 @@ use super::*;
 #[test]
 fn languages_switch_persist_and_keep_user_values() {
     use crate::control::{ControlRequest, Outcome};
-    let languages: [(Locale, &str, &[&str], &str); 8] = [
+    let languages: [(Locale, &str, &[&str], &str); 9] = [
+        (Locale::Th, "thai", &["th", "th-TH", "th_TH.UTF-8"], "กขคงจฉชญฐณดตถทนบปผฝพฟมยรลวศษสหฬอฮะาิีึืุูเแโใไ่้๊๋์"),
         (Locale::Cs, "czech", &["cs", "cs-CZ", "cs_CZ.UTF-8", "cs-Latn-CZ"], "áčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ„“"),
         (Locale::Id, "indonesian", &["id", "id-ID", "id_ID.UTF-8", "id-Latn-ID"], ""),
         (Locale::Sv, "swedish", &["sv", "sv-SE", "sv_SE.UTF-8", "sv-FI"], "åäöÅÄÖé”’"),
@@ -373,6 +374,7 @@ fn translated_catalogs_do_not_use_missing_menu_triangles() {
 #[test]
 fn language_commands_cover_every_language() {
     let commands = [
+        ("app.language.thai", Locale::Th),
         ("app.language.traditionalChinese", Locale::ZhHant),
         ("app.language.english", Locale::En),
         ("app.language.simplifiedChinese", Locale::ZhHans),
