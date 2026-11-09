@@ -1,94 +1,74 @@
-# LightCraft TH — คลังภาพและ RAWภาษาไทย
+# LightCraft TH
 
-โครงการเตรียมรุ่นภาษาไทยอิสระของ [LightCraft โดย storytold / ArtCraft](https://github.com/storytold/lightcraft) ในชุด [วันละ Craft / One Per Craft](https://github.com/tapanapon-com/one-per-craft) เอนจินและคุณสมบัติหลักเป็นผลงานของผู้พัฒนาต้นฉบับ
+LightCraft รุ่นภาษาไทย สำหรับจัดคลังภาพ คัดภาพ และปรับแต่งภาพแบบไม่แก้ต้นฉบับ ต่อยอดจาก [storytold/lightcraft](https://github.com/storytold/lightcraft) โดย Tapanapon / One Per Craft
 
-[ดาวน์โหลดต้นฉบับ v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) · [คู่มือ Mac](docs/install-macos.md) · [คู่มือ Windows](docs/install-windows.md) · [Version Log](docs/version-log.md) · [English](#english)
+รุ่นไทย **0.19.0-th.1** ใช้ซอร์สต้นฉบับ **v0.19.0** ที่ commit [`16636c4`](https://github.com/storytold/lightcraft/tree/16636c45a63bff3065a6fd31aecc22a6fc15ca53) เป็นฐาน ซอร์สแอปจริงอยู่ใน repository นี้ รุ่นนี้เป็น prerelease และยังอยู่ในระยะ alpha ตามต้นฉบับ
 
-## สถานะรุ่นไทย
+## ดาวน์โหลดและติดตั้ง
 
-**ยังไม่เผยแพร่แอปหรือตัวติดตั้งภาษาไทย** Repository นี้เริ่มต้นด้วย README คู่มือ และ manifest อ้างอิงต้นทาง ยังไม่ได้รวมซอร์สโค้ดแอปหรือคำแปลที่พร้อมแจก การสร้าง repo ไม่ใช่การประกาศว่าแอปรุ่นไทยเสร็จแล้ว
+ไฟล์ติดตั้งอยู่ใน **[Releases → v0.19.0-th.1](https://github.com/tapanapon-com/lightcraft-th/releases/tag/v0.19.0-th.1) → Assets** ต้องขยาย Assets เพื่อดูไฟล์ ไม่ใช้ปุ่ม Code → Download ZIP สำหรับติดตั้ง
 
-| รายการ | สถานะ |
+| ระบบ | ไฟล์ที่เลือก |
 | --- | --- |
-| Release ต้นฉบับที่ตรวจ | [v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) |
-| แพ็กเกจภาษาไทยของ Tapanapon | ยังไม่เผยแพร่ |
-| เนื้อหา repo นี้ | เอกสารและข้อมูลอ้างอิงต้นทาง |
-| ตรวจ Release ล่าสุด | 07/11/2026 22:57 ICT |
+| Mac Apple Silicon (M-series), macOS 11 ขึ้นไป | `lightcraft-0.19.0-th.1-macos-aarch64.dmg` |
+| Windows x64 | `lightcraft-0.19.0-th.1-windows-x64.msi` |
+| Windows x64 แบบไม่ติดตั้ง | `lightcraft-0.19.0-th.1-windows-x64-portable.zip` |
 
-ลิงก์ดาวน์โหลดด้านบนเป็นไฟล์ต้นฉบับของ storytold / ArtCraft ไม่ใช่ตัวติดตั้ง TH และอาจมีภาษาที่รองรับต่างกันตามรุ่น อ่าน [ข้อมูลต้นทาง](UPSTREAM.md) และ [สถานะคำแปล](docs/localization-th.md)
+รุ่นไทยนี้ยังไม่มีแพ็กเกจ Mac Intel หรือ Windows ARM64 ที่ตรวจยืนยัน ใช้ไฟล์ตรงกับเครื่องของคุณ
 
-## ทำอะไรได้บ้าง
+### Mac
 
-ความสามารถต่อไปนี้เป็นของแอปต้นฉบับ ไม่ใช่ผลการพัฒนารุ่นไทยเพิ่มเติม:
+1. ตรวจ Apple menu → About This Mac ว่า Chip เป็น Apple M-series
+2. ดาวน์โหลด DMG และไฟล์ `.sha256` ชื่อเดียวกันจาก Assets ของรุ่นนี้
+3. เปิด DMG แล้วลาก **LightCraft.app** เข้า **Applications** ปิดแอปรุ่นเดิมก่อนแทนที่
+4. Eject ดิสก์ติดตั้ง แล้วเปิด LightCraft จาก Applications
+5. โปรไฟล์ใหม่เริ่มภาษาไทย หากเคยเลือกภาษาอื่นไว้ ให้เปิด **Edit → Language → ไทย** หรือ **Settings → Language → ไทย**
 
-- จัดคลังภาพ อัลบั้ม และข้อมูลภาพถ่าย
-- พัฒนาไฟล์ RAW และปรับค่าภาพ
-- เลือกภาพและส่งออกตามรูปแบบที่ต้นฉบับรองรับ
+แพ็กเกจ Mac ใช้ลายเซ็น ad-hoc และยังไม่ผ่าน Apple notarization หากระบบปฏิเสธการเปิด ให้ตรวจไฟล์และ SHA-256 แล้วทำตามตัวเลือกที่ macOS แสดงใน Privacy & Security สำหรับแอปที่คุณตรวจแล้ว ไม่ปิด Gatekeeper ทั้งระบบ
 
-## ภาพหน้าจอ
+ตรวจ hash โดยเปลี่ยนพาธให้ตรงไฟล์ที่ดาวน์โหลด:
 
-ดูภาพและตัวอย่างจาก [README ต้นฉบับ](https://github.com/storytold/lightcraft/blob/main/README.md) ขณะนี้ยังไม่มีภาพหน้าจอแอปรุ่นไทยที่ยืนยันสำหรับ repo นี้ จึงไม่ใช้ภาพจำลองเป็นหลักฐานว่าแปลเสร็จแล้ว
+```sh
+shasum -a 256 ~/Downloads/lightcraft-0.19.0-th.1-macos-aarch64.dmg
+```
 
-## ดาวน์โหลดและติดตั้งบน Mac
+### Windows
 
-1. เปิด [GitHub Release ต้นฉบับ v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) แล้วขยาย Assets
-2. เลือกไฟล์ `macos-universal.dmg` ตามข้อกำหนดระบบของต้นฉบับ
-3. บันทึกงานและปิดแอปเดิม เปิด DMG แล้วลากแอปเข้า Applications
-4. เปิดจาก Applications และตรวจข้อมูลภาษาในแอปรุ่นนั้น
+1. เปิด Settings → System → About ตรวจว่าเป็นเครื่อง x64
+2. ดาวน์โหลด MSI และ `SHA256SUMS-windows-x64.txt` จาก Assets รุ่นเดียวกัน
+3. เปิด MSI เลือกขอบเขตผู้ใช้และโฟลเดอร์ติดตั้งตามหน้าจอ แล้วเปิด LightCraft จาก Start
+4. ถ้าใช้ Portable ให้แตก ZIP **ทั้งหมด** ไปยังโฟลเดอร์ใหม่ แล้วเปิด `lightcraft.exe` เก็บ `lightcraft-cli.exe` และไฟล์ประกอบไว้ด้วยกัน
+5. เลือกไทยใน **Edit → Language** หรือ **Settings → Language** หากมีการตั้งค่าภาษาเดิม
 
-อ่าน [คู่มือ Mac ของแอปนี้](docs/install-macos.md) ไฟล์ Source code ZIP เป็นซอร์สสำหรับ build ไม่ใช่ตัวติดตั้ง
+แพ็กเกจ Windows ยังไม่มีลายเซ็นดิจิทัล หาก SmartScreen เตือน ให้ตรวจแหล่งดาวน์โหลดและ hash ก่อนทำตามตัวเลือกที่เครื่องอนุญาต
 
-## ดาวน์โหลดและติดตั้งบน Windows
+```powershell
+Get-FileHash -Algorithm SHA256 "$env:USERPROFILE\Downloads\lightcraft-0.19.0-th.1-windows-x64.msi"
+```
 
-1. เปิด [Release ต้นฉบับ](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) แล้วเลือก Windows ให้ตรงสถาปัตยกรรมเครื่อง
-2. ใช้ MSI เพื่อติดตั้ง หรือ Portable ZIP แล้ว Extract All ก่อนเปิด `.exe`
-3. เก็บไฟล์ในชุด Portable ไว้ครบ และตรวจ checksum ของรุ่นเดียวกัน
+### อัปเดตและใช้ซอร์สจาก GitHub
 
-อ่าน [คู่มือ Windows ของแอปนี้](docs/install-windows.md) ปุ่มหลักอ้างอิง Windows x64; สถาปัตยกรรมอื่นดูใน Assets ของต้นทาง
+รุ่น `-th.1` ใช้ดาวน์โหลดอัปเดตด้วยตนเองจาก Releases ตัวตรวจอัปเดตของต้นฉบับไม่เสนอ prerelease นี้ ปิดแอปและสำรองคลังภาพก่อนเปลี่ยนรุ่น สำหรับ Portable ให้แตกลงโฟลเดอร์ใหม่
 
-## เชื่อมกับ Codex หรือ Claude
+**Source code (zip/tar.gz)**, **Code → Download ZIP** และ `git clone` เป็นซอร์ส ต้องติดตั้ง Rust และ build ก่อน ดู [คู่มือติดตั้งจากซอร์สและ MCP](docs/localization-th.md) หากต้องการใช้งานทันที ให้เลือก DMG/MSI/Portable
 
-ต้นฉบับมี CLI/MCP สำหรับเรียกเครื่องมือของแอป อ่าน [คู่มือเชื่อม AI](docs/automation.md) โดยตรวจ CLI และ arguments ของรุ่นที่ติดตั้งก่อน โหมด headless ทำงานแยกจากหน้าต่าง GUI ที่เปิดอยู่
+## ภาษาไทยและผลตรวจ
 
-## รุ่นต้นฉบับนี้เปลี่ยนอะไร?
+แค็ตตาล็อกมีข้อความทั่วไป 3,826 รายการ และรูปแบบข้อความ 336 รายการ รวม **4,162 รายการ** ชื่อไฟล์ ข้อมูลผู้ใช้ และรหัสเทคนิคคงรูปเดิม ข้อความวินิจฉัยจากเอนจินและบันทึกย้อนหลังใน What’s New บางส่วนยังเป็นอังกฤษ มีการใช้ร่างแปลช่วยด้วยเครื่องมือและปรับศัพท์/ตัวเลข/ตัวแปร ยังไม่ได้อ้างว่ามีผู้ตรวจภาษาทุกประโยคอย่างอิสระ
 
-สรุปบางรายการของ v0.19.0 จาก Release Notes ต้นทาง:
+ดู [Version Log](docs/version-log.md) และผลตรวจรุ่นนี้ก่อนใช้งานจริง การรองรับ RAW ขึ้นอยู่กับกล้องและชนิดการบีบอัด ไม่ได้เทียบเท่าความสามารถทั้งหมดของ Lightroom
 
-- ใช้ไลบรารี craftlib สำหรับการอ่านไฟล์ CRW — [ต้นทาง](https://github.com/storytold/lightcraft/pull/3503)
-- แก้การเลือกโปรไฟล์เลนส์เมื่อต่อ teleconverter ไม่ให้ใช้โปรไฟล์ของเลนส์เดี่ยวผิดชุด — [ต้นทาง](https://github.com/storytold/lightcraft/pull/3660)
-- ปรับการครอปหลังแก้ความคลาดเลนส์ให้อยู่ภายในภาพที่แก้แล้ว — [ต้นทาง](https://github.com/storytold/lightcraft/pull/3012)
+## เชื่อม Codex หรือ Claude
 
-อ่าน [CHANGELOG](CHANGELOG.md) และ [Version Log ต้นฉบับ](docs/version-log.md) การเปลี่ยนแปลงข้างต้นยังไม่ได้ถูกอ้างว่าเข้าแพ็กเกจ TH แล้ว
+แพ็กเกจ Mac มี CLI ใน `LightCraft.app/Contents/MacOS/lightcraft-cli` ส่วน Windows มี `lightcraft-cli.exe` ข้างโปรแกรม ดูตัวอย่างแบบ headless และเชื่อมหน้าต่างแอปใน [คู่มือ MCP ภาษาไทย](docs/localization-th.md)
 
-## ขอบเขตคำแปลและการตรวจสอบ
+## ต้นฉบับและสัญญาอนุญาต
 
-ยังไม่มีจำนวนคำแปล ผล build หรือผลทดสอบแอปรุ่นไทยที่ประกาศสำหรับ repository นี้ การตรวจในรอบเริ่มต้นครอบคลุมความครบของเอกสาร รูปแบบ manifest และลิงก์ที่เลือกจาก Release ต้นทางเท่านั้น
-
-เมื่อเริ่มนำซอร์สแอปเข้ามาพัฒนาต่อ ต้องบันทึก revision ต้นทาง ตรวจคำแปล/ฟอนต์ ทดสอบ และตรวจแพ็กเกจก่อนเผยแพร่รุ่นไทย ดู [แผนงาน](docs/localization-th.md)
-
-## ต้นฉบับ เครดิต และสัญญาอนุญาต
-
-- ต้นฉบับ: [LightCraft โดย storytold / ArtCraft](https://github.com/storytold/lightcraft)
-- คำอธิบายและการติดตามรุ่นไทย: Tapanapon / วันละ Craft
-- เอกสารที่สร้างใหม่ใน repo นี้ใช้ [MIT](LICENSE) ส่วนโค้ด ฟอนต์ ภาพ และเครื่องหมายการค้าของต้นฉบับคงสิทธิ์และใบอนุญาตของเจ้าของ ไม่ได้เปลี่ยนเป็น MIT ตามเอกสารนี้
-- เป็นโครงการอิสระ ไม่ใช่รุ่นทางการหรือได้รับการรับรองจากผู้สร้าง LightCraft/ArtCraft
+- [ซอร์สต้นฉบับ](https://github.com/storytold/lightcraft) · [Release Notes v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0)
+- เอนจินและความสามารถหลักเป็นผลงานของผู้พัฒนาต้นฉบับ รุ่นไทยเป็นงานแปลอิสระ ไม่ใช่รุ่นที่รับรองโดยผู้สร้าง ArtCraft
+- คง [MIT](LICENSE-MIT), [Apache-2.0](LICENSE-APACHE), [NOTICE](NOTICE), [เครดิตทรัพยากร](assets/ATTRIBUTION.md) และสัญญาอนุญาตฟอนต์ไว้
+- เอกสารต้นฉบับ: [README-upstream.md](README-upstream.md)
 
 ## English
 
-LightCraft TH is an independent Thai-edition preparation project for [LightCraft by storytold / ArtCraft](https://github.com/storytold/lightcraft). The upstream contributors created the engine and application features. Tapanapon / One Per Craft maintains these Thai/English project notes and upstream references.
-
-### Features and workflow
-
-Organize a photo library, develop RAW files and export photographs. See the upstream README for supported workflows and limitations. Source capabilities are not a claim of completed Thai localization.
-
-### Downloads and installation
-
-The verified upstream release is [v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0). Mac users can select the upstream Universal DMG; Windows users can select the matching MSI or portable ZIP in Assets. See [Mac instructions](docs/install-macos.md) and [Windows instructions](docs/install-windows.md). Source archives require a build.
-
-### Coverage and validation
-
-**This repository currently contains documentation and an upstream manifest only. It does not yet contain a localized application source tree or Thai installers.** No Thai translation count, native test result or binary release is claimed. The existing three published Thai apps are listed in the [central hub](https://github.com/tapanapon-com/one-per-craft).
-
-### Source and credits
-
-Original application by storytold / ArtCraft. This is not an official or endorsed distribution. New project documentation is MIT-licensed; upstream code, assets, fonts and trademarks retain their own terms. Read [UPSTREAM](UPSTREAM.md) and [NOTICE](NOTICE.md).
+LightCraft TH is an independent Thai localization based on the complete upstream v0.19.0 source. Download the Apple Silicon DMG or Windows x64 MSI/portable ZIP from the tagged prerelease's **Assets**. Source archives require a build. New profiles default to Thai; existing language preferences are retained. The Mac bundle includes the CLI for MCP clients. Mac packages are ad-hoc signed without Apple notarization; Windows packages are unsigned. See the version log and validation report for the exact tested scope. Core application work belongs to the upstream contributors and its original licenses remain intact.
