@@ -1,6 +1,6 @@
 # LightCraft TH: ติดตั้งจาก GitHub และเชื่อม Codex / Claude
 
-เริ่มจาก [README](../README.md) สำหรับ DMG/MSI/Portable วิธีนี้สำหรับผู้ที่ต้องการ build ซอร์สหรือใช้ CLI ของรุ่นไทย 0.19.0-th.1
+เริ่มจาก [README](../README.md) สำหรับ DMG/MSI/Portable วิธีนี้สำหรับผู้ที่ต้องการ build ซอร์สหรือใช้ CLI ของรุ่นไทย 0.20.0-th.1
 
 ## ใช้ซอร์สบน Mac
 
@@ -11,7 +11,7 @@ git clone https://github.com/tapanapon-com/lightcraft-th.git
 git clone https://github.com/storytold/craft-fonts.git
 git -C craft-fonts checkout b076417b5880bd4154bd22f00695b1d28c6bea83
 cd lightcraft-th
-git checkout v0.19.0-th.1
+git checkout v0.20.0-th.1
 CRAFT_FONTS_DIR=../craft-fonts CRAFT_FONTS_REQUIRED=1 \
   cargo build --release --locked -p lightcraft -p lightcraft-cli \
   --features lightcraft/heif,lightcraft-cli/heif
@@ -29,7 +29,7 @@ git clone https://github.com/tapanapon-com/lightcraft-th.git
 git clone https://github.com/storytold/craft-fonts.git
 git -C craft-fonts checkout b076417b5880bd4154bd22f00695b1d28c6bea83
 Set-Location lightcraft-th
-git checkout v0.19.0-th.1
+git checkout v0.20.0-th.1
 $env:CRAFT_FONTS_DIR = (Resolve-Path ..\craft-fonts).Path
 $env:CRAFT_FONTS_REQUIRED = '1'
 cargo build --release --locked -p lightcraft -p lightcraft-cli --features lightcraft/heif,lightcraft-cli/heif

@@ -2,7 +2,7 @@
 
 LightCraft รุ่นภาษาไทย สำหรับจัดคลังภาพ คัดภาพ และปรับแต่งภาพแบบไม่แก้ต้นฉบับ ต่อยอดจาก [storytold/lightcraft](https://github.com/storytold/lightcraft) โดย Tapanapon / One Per Craft
 
-รุ่นไทย **0.19.0-th.1** ใช้ซอร์สต้นฉบับ **v0.19.0** ที่ commit [`16636c4`](https://github.com/storytold/lightcraft/tree/16636c45a63bff3065a6fd31aecc22a6fc15ca53) เป็นฐาน ซอร์สแอปจริงอยู่ใน repository นี้ รุ่นนี้เป็น prerelease และยังอยู่ในระยะ alpha ตามต้นฉบับ
+รุ่นไทย **0.20.0-th.1** ใช้ซอร์สต้นฉบับ **v0.20.0** ที่ commit [`192ff72`](https://github.com/storytold/lightcraft/tree/192ff72923c39e6623f2c7ff67ab3a119deb8071) เป็นฐาน ซอร์สแอปจริงอยู่ใน repository นี้ รุ่นนี้เป็น prerelease และยังอยู่ในระยะ alpha ตามต้นฉบับ
 
 ## ภาพหน้าจอจากแอปไทยจริง
 
@@ -16,13 +16,13 @@ LightCraft รุ่นภาษาไทย สำหรับจัดคล�
 
 ## ดาวน์โหลดและติดตั้ง
 
-ไฟล์ติดตั้งอยู่ใน **[Releases → v0.19.0-th.1](https://github.com/tapanapon-com/lightcraft-th/releases/tag/v0.19.0-th.1) → Assets** ต้องขยาย Assets เพื่อดูไฟล์ ไม่ใช้ปุ่ม Code → Download ZIP สำหรับติดตั้ง
+ไฟล์ติดตั้งอยู่ใน **[Releases → v0.20.0-th.1](https://github.com/tapanapon-com/lightcraft-th/releases/tag/v0.20.0-th.1) → Assets** ต้องขยาย Assets เพื่อดูไฟล์ ไม่ใช้ปุ่ม Code → Download ZIP สำหรับติดตั้ง
 
 | ระบบ | ไฟล์ที่เลือก |
 | --- | --- |
-| Mac Apple Silicon (M-series), macOS 11 ขึ้นไป | `lightcraft-0.19.0-th.1-macos-aarch64.dmg` |
-| Windows x64 | `lightcraft-0.19.0-th.1-windows-x64.msi` |
-| Windows x64 แบบไม่ติดตั้ง | `lightcraft-0.19.0-th.1-windows-x64-portable.zip` |
+| Mac Apple Silicon (M-series), macOS 11 ขึ้นไป | `lightcraft-0.20.0-th.1-macos-aarch64.dmg` |
+| Windows x64 | `lightcraft-0.20.0-th.1-windows-x64.msi` |
+| Windows x64 แบบไม่ติดตั้ง | `lightcraft-0.20.0-th.1-windows-x64-portable.zip` |
 
 รุ่นไทยนี้ยังไม่มีแพ็กเกจ Mac Intel หรือ Windows ARM64 ที่ตรวจยืนยัน ใช้ไฟล์ตรงกับเครื่องของคุณ
 
@@ -39,7 +39,7 @@ LightCraft รุ่นภาษาไทย สำหรับจัดคล�
 ตรวจ hash โดยเปลี่ยนพาธให้ตรงไฟล์ที่ดาวน์โหลด:
 
 ```sh
-shasum -a 256 ~/Downloads/lightcraft-0.19.0-th.1-macos-aarch64.dmg
+shasum -a 256 ~/Downloads/lightcraft-0.20.0-th.1-macos-aarch64.dmg
 ```
 
 ### Windows
@@ -53,7 +53,7 @@ shasum -a 256 ~/Downloads/lightcraft-0.19.0-th.1-macos-aarch64.dmg
 แพ็กเกจ Windows ยังไม่มีลายเซ็นดิจิทัล หาก SmartScreen เตือน ให้ตรวจแหล่งดาวน์โหลดและ hash ก่อนทำตามตัวเลือกที่เครื่องอนุญาต
 
 ```powershell
-Get-FileHash -Algorithm SHA256 "$env:USERPROFILE\Downloads\lightcraft-0.19.0-th.1-windows-x64.msi"
+Get-FileHash -Algorithm SHA256 "$env:USERPROFILE\Downloads\lightcraft-0.20.0-th.1-windows-x64.msi"
 ```
 
 ### อัปเดตและใช้ซอร์สจาก GitHub
@@ -74,11 +74,11 @@ Get-FileHash -Algorithm SHA256 "$env:USERPROFILE\Downloads\lightcraft-0.19.0-th.
 
 ## ต้นฉบับและสัญญาอนุญาต
 
-- [ซอร์สต้นฉบับ](https://github.com/storytold/lightcraft) · [Release Notes v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0)
+- [ซอร์สต้นฉบับ](https://github.com/storytold/lightcraft) · [Release Notes v0.20.0](https://github.com/storytold/lightcraft/releases/tag/v0.20.0)
 - เอนจินและความสามารถหลักเป็นผลงานของผู้พัฒนาต้นฉบับ รุ่นไทยเป็นงานแปลอิสระ ไม่ใช่รุ่นที่รับรองโดยผู้สร้าง ArtCraft
 - คง [MIT](LICENSE-MIT), [Apache-2.0](LICENSE-APACHE), [NOTICE](NOTICE), [เครดิตทรัพยากร](assets/ATTRIBUTION.md) และสัญญาอนุญาตฟอนต์ไว้
 - เอกสารต้นฉบับ: [README-upstream.md](README-upstream.md)
 
 ## English
 
-LightCraft TH is an independent Thai localization based on the complete upstream v0.19.0 source. Download the Apple Silicon DMG or Windows x64 MSI/portable ZIP from the tagged prerelease's **Assets**. Source archives require a build. New profiles default to Thai; existing language preferences are retained. The Mac bundle includes the CLI for MCP clients. Mac packages are ad-hoc signed without Apple notarization; Windows packages are unsigned. See the version log and validation report for the exact tested scope. Core application work belongs to the upstream contributors and its original licenses remain intact.
+LightCraft TH is an independent Thai localization based on the complete upstream v0.20.0 source. Download the Apple Silicon DMG or Windows x64 MSI/portable ZIP from the tagged prerelease's **Assets**. Source archives require a build. New profiles default to Thai; existing language preferences are retained. The Mac bundle includes the CLI for MCP clients. Mac packages are ad-hoc signed without Apple notarization; Windows packages are unsigned. See the version log and validation report for the exact tested scope. Core application work belongs to the upstream contributors and its original licenses remain intact.

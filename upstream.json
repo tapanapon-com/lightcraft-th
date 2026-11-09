@@ -2,38 +2,51 @@
   "id": "lightcraft",
   "name": "LightCraft",
   "repository": "https://github.com/tapanapon-com/lightcraft-th",
-  "status": "documentation-only",
-  "containsApplicationSource": false,
-  "thaiVersion": null,
-  "thaiArticle": null,
+  "status": "native-thai-prerelease-preparation",
+  "containsApplicationSource": true,
+  "thaiVersion": "0.20.0-th.1",
+  "thaiArticle": "https://tapanapon.com/blog/lightcraft-th-thai-raw-photo-editor",
   "upstream": {
     "repository": "https://github.com/storytold/lightcraft",
-    "releaseTag": "v0.19.0",
-    "releaseUrl": "https://github.com/storytold/lightcraft/releases/tag/v0.19.0",
-    "publishedAt": "2026-11-06T20:21:50Z",
-    "checkedAt": "2026-11-07T03:59:09.433727+00:00",
-    "sourceCommit": "8a0b91a95c30618b690374dd2db9d0684ebc9b23",
-    "sourceVersion": "0.18.0",
-    "macDownload": "https://github.com/storytold/lightcraft/releases/download/v0.19.0/lightcraft-0.19.0-macos-universal.dmg",
-    "windowsDownload": "https://github.com/storytold/lightcraft/releases/download/v0.19.0/lightcraft-0.19.0-windows-x64.msi",
-    "portableDownload": "https://github.com/storytold/lightcraft/releases/download/v0.19.0/lightcraft-0.19.0-windows-x64-portable.zip",
-    "checksums": "https://github.com/storytold/lightcraft/releases/download/v0.19.0/SHA256SUMS.txt",
+    "releaseTag": "v0.20.0",
+    "releaseUrl": "https://github.com/storytold/lightcraft/releases/tag/v0.20.0",
+    "publishedAt": "2026-11-09T11:57:03Z",
+    "checkedAt": "2026-11-09T14:50:29.766506+00:00",
+    "sourceCommit": "192ff72923c39e6623f2c7ff67ab3a119deb8071",
+    "sourceVersion": "0.20.0",
+    "macDownload": "https://github.com/storytold/lightcraft/releases/download/v0.20.0/lightcraft-0.20.0-macos-universal.dmg",
+    "windowsDownload": "https://github.com/storytold/lightcraft/releases/download/v0.20.0/lightcraft-0.20.0-windows-x64.msi",
+    "portableDownload": "https://github.com/storytold/lightcraft/releases/download/v0.20.0/lightcraft-0.20.0-windows-x64-portable.zip",
+    "checksums": "https://github.com/storytold/lightcraft/releases/download/v0.20.0/SHA256SUMS.txt",
     "changes": [
       {
-        "text": "ใช้ไลบรารี craftlib สำหรับการอ่านไฟล์ CRW",
-        "source": "https://github.com/storytold/lightcraft/pull/3503"
+        "text": "นำเข้ามาสก์แบบกลับด้านจาก Lightroom ให้ตรงกับการแก้ไขที่บันทึกไว้",
+        "source": "https://github.com/storytold/lightcraft/pull/3862"
       },
       {
-        "text": "แก้การเลือกโปรไฟล์เลนส์เมื่อต่อ teleconverter ไม่ให้ใช้โปรไฟล์ของเลนส์เดี่ยวผิดชุด",
-        "source": "https://github.com/storytold/lightcraft/pull/3660"
+        "text": "ถอนการถอดรหัส ORF แบบบีบอัดระหว่างตรวจสอบที่มาของโค้ด จึงอาจเปิดได้เฉพาะ preview ในบางไฟล์",
+        "source": "https://github.com/storytold/lightcraft/pull/3916"
       },
       {
-        "text": "ปรับการครอปหลังแก้ความคลาดเลนส์ให้อยู่ภายในภาพที่แก้แล้ว",
-        "source": "https://github.com/storytold/lightcraft/pull/3012"
+        "text": "แก้สมดุลสีขาวแบบ Kelvin สำหรับ Fujifilm DNG ที่ผ่าน DxO demosaic",
+        "source": "https://github.com/storytold/lightcraft/pull/3887"
+      },
+      {
+        "text": "เพิ่ม film grain จากชั้นผลึกใน process V4 โดยไม่เพิ่มต้นทุนงาน GPU",
+        "source": "https://github.com/storytold/lightcraft/pull/3630"
+      },
+      {
+        "text": "แสดงสถานะติดตั้งอัปเดต พร้อมติดตั้งเมื่อออกจากแอปในต้นฉบับ",
+        "source": "https://github.com/storytold/lightcraft/pull/3995"
       }
     ],
-    "releaseCheckedAt": "2026-11-07T15:57:45.414988+00:00",
+    "releaseCheckedAt": "2026-11-09T14:50:29.767974+00:00",
     "releaseHistory": [
+      {
+        "tag": "v0.20.0",
+        "publishedAt": "2026-11-09T11:57:03Z",
+        "url": "https://github.com/storytold/lightcraft/releases/tag/v0.20.0"
+      },
       {
         "tag": "v0.19.0",
         "publishedAt": "2026-11-06T20:21:50Z",
@@ -43,11 +56,6 @@
         "tag": "v0.18.1",
         "publishedAt": "2026-11-05T01:25:33Z",
         "url": "https://github.com/storytold/lightcraft/releases/tag/v0.18.1"
-      },
-      {
-        "tag": "v0.18.0",
-        "publishedAt": "2026-11-03T00:54:20Z",
-        "url": "https://github.com/storytold/lightcraft/releases/tag/v0.18.0"
       }
     ]
   },
