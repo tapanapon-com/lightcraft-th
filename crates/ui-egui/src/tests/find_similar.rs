@@ -164,11 +164,24 @@ fn stopping_leaves_the_view_alone_and_the_next_search_reads_only_the_rest() {
     assert!(h.app.ui.toast.is_none(), "{:?}", h.app.ui.toast);
     assert_eq!(drive.reads.load(Ordering::SeqCst), 1);
 
+    // Reproduce the grid's decoded-source cache deterministically (#3799), rather than
+    // depending on which thumbnail workers finish while the stopped search is polled.
+    for id in [PhotoId(2), PhotoId(3)] {
+        let job = h.app.session.thumb_job(id, 128).unwrap();
+        let rendered = std::thread::spawn(move || job.run()).join().unwrap();
+        h.app.session.accept(&rendered);
+        assert!(h.app.session.media.has_source(id, lightcraft_engine::media::SourceLevel::Thumb));
+    }
+    // This assertion counts file reads, so drop the UI's decoded sources, keeping the
+    // search's completed signature. The next plan must still exclude that one content.
+    h.app.session.media.clear_sources();
+
     let r = h.app.run("library.findSimilar", json!({"id": 1})).unwrap();
     assert_eq!(r["count"], PHOTOS - 1, "what was read isn't read again");
     until_done(&mut h);
     assert_eq!(drive.reads.load(Ordering::SeqCst), PHOTOS as usize);
     assert_eq!(h.app.session.filter.only.len(), PHOTOS as usize / 2);
+    assert_eq!(drive.on_ui.load(Ordering::SeqCst), 0, "a file was read on the UI thread");
 }
 
 /// Nothing to read: the answer comes on the next frames, with no photo read.

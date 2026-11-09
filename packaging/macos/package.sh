@@ -4,7 +4,7 @@
 #   $DIST/lightcraft-<version>-macos-<arch>.dmg          LightCraft.app on a drag-to-Applications DMG
 #   $DIST/lightcraft-cli-<version>-macos-<arch>.zip      the headless CLI
 #
-# Usage: packaging/macos/package.sh [--arch universal|aarch64|x86_64] [--skip-build]
+# Usage: packaging/macos/package.sh [--arch universal|aarch64|x86_64] [--skip-build] [--skip-dmg]
 # Fonts: use CRAFT_FONTS_DIR or ../craft-fonts; download the pinned checkout if absent.
 #
 # Signing (env):
@@ -20,10 +20,12 @@ HERE="$ROOT/packaging/macos"
 
 ARCH=universal
 SKIP_BUILD=0
+SKIP_DMG=0
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --arch) ARCH="$2"; shift 2 ;;
     --skip-build) SKIP_BUILD=1; shift ;;
+    --skip-dmg) SKIP_DMG=1; shift ;;
     -h | --help) sed -n '2,16p' "$0"; exit 0 ;;
     *) echo "unknown argument: $1" >&2; exit 2 ;;
   esac
@@ -153,6 +155,9 @@ if [[ "$NOTARIZE" = 1 ]]; then
 fi
 
 # ---- DMG ---------------------------------------------------------------------------------------
+# The Thai plain-DMG helper can package the signed bundle separately on hosts where this
+# decorated image's temporary volume cannot be populated. Keep the app and CLI checks above.
+if [[ "$SKIP_DMG" = 0 ]]; then
 echo "==> building $DMG"
 STAGE="$WORK/dmg"
 mkdir -p "$STAGE"
@@ -225,6 +230,7 @@ if [[ "$NOTARIZE" = 1 ]]; then
   stapler_retry validate "$DMG"
   spctl --assess --type open --context context:primary-signature -vvv "$DMG"
 fi
+fi
 
 # ---- CLI ---------------------------------------------------------------------------------------
 echo "==> building $CLI_ZIP"
@@ -244,4 +250,8 @@ if [[ "$NOTARIZE" = 1 ]]; then notarize "$CLI_ZIP"; fi
 
 "$WORK/bin/lightcraft-cli" --version
 echo "==> done"
-ls -lh "$DMG" "$CLI_ZIP"
+if [[ "$SKIP_DMG" = 0 ]]; then
+  ls -lh "$DMG" "$CLI_ZIP"
+else
+  ls -lh "$CLI_ZIP"
+fi
