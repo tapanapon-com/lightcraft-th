@@ -1239,7 +1239,8 @@ fn assert_polish_counts() {
             ("cached picture", "cached pictures", "Obrazy w pamięci podręcznej"),
             ("photo has its denoised picture.", "photos have their denoised picture.", "Zdjęcia z odszumioną wersją"),
         ] {
-            assert_eq!(tr_format!("{n} {noun}", n = n, noun = tr(if n == 1 { one } else { many })), format!("{noun}: {n}"));
+            let translated_noun = tr(if n == 1 { one } else { many });
+            assert_eq!(tr_format!("{n} {noun}", n = n, noun = translated_noun), format!("{noun}: {n}"));
         }
         assert_eq!(tr_format!("Delete {n} Photos", n = n), format!("Usuń zdjęcia ({n})"));
         assert_eq!(tr_format!("{n} preset{}", s, n = n), format!("Ustawienia: {n}"));
