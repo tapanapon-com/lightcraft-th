@@ -12,7 +12,7 @@ LightCraft รุ่นภาษาไทย สำหรับจัดคล�
 
 ![LightCraft TH คลังภาพแบบตาราง](docs/images/thai/lightcraft-th-library.png)
 
-[ภาพการตั้งค่า](docs/images/thai/lightcraft-th-settings.png) · [บันทึกการถ่ายภาพและผลตรวจ](docs/images/thai/capture-0.19.0-th.1.json)
+[ภาพการตั้งค่า](docs/images/thai/lightcraft-th-settings.png) · [บันทึกการถ่ายภาพและผลตรวจ](docs/images/thai/capture-0.20.0-th.1.json)
 
 ## ดาวน์โหลดและติดตั้ง
 

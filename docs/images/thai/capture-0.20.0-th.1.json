@@ -1,25 +1,25 @@
 {
-  "capturedAt": "2026-11-09T14:39:04.377472+00:00",
-  "thaiVersion": "0.19.0-th.1",
-  "sourceCommit": "e63d1020a2ed79f68d865b2934e4b806ef7e2b77",
+  "capturedAt": "2026-11-09T15:50:07.429453+00:00",
+  "thaiVersion": "0.20.0-th.1",
+  "sourceCommit": "51f9f2364eaa771dda5fbe6c1ad54a901b42a287",
   "package": {
-    "name": "lightcraft-0.19.0-th.1-macos-aarch64.dmg",
-    "sha256": "b24c770b17259dce370c9c553b8ae96c6d08c11ae6bda73d88d8d150bc596f3a",
-    "bytes": 128478427
+    "name": "lightcraft-0.20.0-th.1-macos-aarch64.dmg",
+    "sha256": "2f4dd16ea38120a4621e701000df8dc1149a3132dc050d5dad872c89d42c45c0",
+    "bytes": 128676878
   },
-  "cliVersion": "lightcraft-cli 0.19.0-th.1",
-  "guiVersion": "lightcraft 0.19.0-th.1",
+  "cliVersion": "lightcraft-cli 0.20.0-th.1",
+  "guiVersion": "lightcraft 0.20.0-th.1",
   "architecture": "arm64",
   "testedOnMacOS": "26.3.1",
   "executables": {
-    "guiSha256": "f351bdb288908ca3f5e6929d32ce0dcbd90540608575f00108a4de3b391d1084",
-    "cliSha256": "78b5d50171e2b0dd3ecac9dda58e1730f5517572f63a13afa3b232efe071b4ba"
+    "guiSha256": "f922ce4d71d03c732e0b02e21fe2922ad7d71c57f0139c39b16807ffc4cd5317",
+    "cliSha256": "5e4133a4decf632361686b2474d647a85276feaeb0775345e5804228b7e29803"
   },
   "bundle": {
-    "CFBundleVersion": "0.19.0",
-    "CFBundleShortVersionString": "0.19.0",
-    "LightCraftVersion": "0.19.0-th.1",
-    "LightCraftBuildCommit": "e63d1020a2ed79f68d865b2934e4b806ef7e2b77",
+    "CFBundleVersion": "0.20.0",
+    "CFBundleShortVersionString": "0.20.0",
+    "LightCraftVersion": "0.20.0-th.1",
+    "LightCraftBuildCommit": "51f9f2364eaa771dda5fbe6c1ad54a901b42a287",
     "CFBundleIdentifier": "ai.storyteller.lightcraft",
     "LSMinimumSystemVersion": "11.0",
     "CFBundleLocalizations": [
@@ -75,8 +75,8 @@
   "screenshots": [
     {
       "file": "lightcraft-th-editing.png",
-      "sha256": "532e07f998a5fefc0e9d421b16b19162b58cdf5907d1a88320d12b95e9059632",
-      "bytes": 1611343,
+      "sha256": "a413dc263835a4c2f1f219cd466d61fb530e5e67beb5096bbaf80bb24ae6549c",
+      "bytes": 1611344,
       "dimensions": [
         2880,
         1800
@@ -84,8 +84,8 @@
     },
     {
       "file": "lightcraft-th-library.png",
-      "sha256": "fa762758bb756dfe80a950079c832a41bd13fc782ae65ab0d9528c2d34620c87",
-      "bytes": 2873489,
+      "sha256": "90b8e5510c9e13903be80d61282f22087341ab3b871bdea891c19fc422f02053",
+      "bytes": 2878892,
       "dimensions": [
         2880,
         1800
@@ -93,8 +93,8 @@
     },
     {
       "file": "lightcraft-th-settings.png",
-      "sha256": "db89e35f47a150bbbf80a357726d65808775fcbf53020181c623fc4c62dc5752",
-      "bytes": 3641411,
+      "sha256": "d235000b4af4c7d532f6eb629bf5a00a54056f92650fc6434993e41780ca3ffc",
+      "bytes": 3641594,
       "dimensions": [
         2880,
         1800
@@ -103,6 +103,6 @@
   ],
   "status": "passed",
   "visualReviewPassed": true,
-  "visuallyReviewedAt": "2026-11-09T14:39:57.946504+00:00",
-  "visualReviewScope": "All three native screenshots inspected: Thai editing labels and exposure, contiguous photo grid, and readable Thai general settings including library/launch/culling/external editing. No generated UI, retouching or personal photos."
+  "visuallyReviewedAt": "2026-11-09T15:51:00.245388+00:00",
+  "visualReviewScope": "All three actual v0.20 Thai native screenshots inspected: editing/exposure, full photo grid with single-selection count, and Thai settings. No missing primary glyphs, generated UI, retouching or personal photographs."
 }
