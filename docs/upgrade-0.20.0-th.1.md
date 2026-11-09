@@ -1,3 +1,3 @@
-# LightCraft TH 0.20.0-th.1 preparation
+# LightCraft TH 0.20.0-th.1
 
-Base: complete upstream v0.20.0 at `192ff72923c39e6623f2c7ff67ab3a119deb8071`. Thai localization and existing test-only corrections are retained. Native platforms and current compiled translation coverage must pass before release.
+The complete upstream v0.20.0 source is retained. See the final [Version Log](version-log.md), [validation report](validation-0.20.0-th.1.json) and [Thai installation/MCP guide](localization-th.md) for the published scope and platform limitations.

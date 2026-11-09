@@ -64,9 +64,7 @@ Or check a project-scoped `.mcp.json` into your repo:
 
 ### Codex
 
-The macOS release includes a separate `lightcraft-cli-<version>-macos-universal.zip`;
-unpack it alongside the desktop app if you do not want to build from source. Use the CLI
-and app from the same release. Verify both downloads against that release's `SHA256SUMS.txt`.
+The independent Thai macOS release includes `lightcraft-cli` inside `LightCraft.app/Contents/MacOS/`. Use the CLI from the same app bundle and verify the DMG against its matching `.sha256` asset. Upstream macOS packages may instead provide a separate CLI ZIP.
 
 Register the CLI's stdio server with Codex using its **absolute** installed path:
 
@@ -100,7 +98,7 @@ The release packages ship `lightcraft-cli` alongside the desktop app, so no buil
 |---|---|
 | Windows (MSI) | `%LOCALAPPDATA%\Programs\ArtCraft\LightCraft\lightcraft-cli.exe` by default (`C:\Program Files\ArtCraft\LightCraft\lightcraft-cli.exe` for an all-users install, under `Program Files (x86)` instead for the 32-bit build, or wherever you installed it otherwise), not on `PATH` |
 | Linux (deb, rpm) | `/usr/bin/lightcraft-cli` |
-| macOS | the separate `lightcraft-cli-<version>-macos-<arch>.zip` release asset (the `.app` holds only the desktop app) |
+| macOS Thai edition | `/Applications/LightCraft.app/Contents/MacOS/lightcraft-cli` after installing the DMG |
 
 ```sh
 # Windows (PowerShell), default install folder

@@ -85,11 +85,18 @@ Claude Desktop ใช้ config รูปแบบนี้ เปลี่ย�
 
 ## ให้ AI ทำงานกับหน้าต่างที่เปิดอยู่
 
-เปิดแอปบน loopback control port แล้วลงทะเบียน MCP แบบ connect:
+ใช้ Terminal สองหน้าต่าง เปิดแอปด้วยคำสั่งแรกในหน้าต่างหนึ่ง แล้วรันคำสั่ง `codex` ในอีกหน้าต่างโดยปล่อยแอปเปิดอยู่:
 
 ```sh
 "/Applications/LightCraft.app/Contents/MacOS/LightCraft" --library "/absolute/path/to/test-library" --control 7980
 codex mcp add lightcraft-app -- "/Applications/LightCraft.app/Contents/MacOS/lightcraft-cli" mcp --connect 127.0.0.1:7980
+```
+
+Windows PowerShell ใช้สองหน้าต่างเช่นกัน ปรับพาธตามที่ติดตั้งจริง:
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\ArtCraft\LightCraft\lightcraft.exe" --library "$env:USERPROFILE\Pictures\LightCraft-Test" --control 7980
+codex mcp add lightcraft-app -- "$env:LOCALAPPDATA\Programs\ArtCraft\LightCraft\lightcraft-cli.exe" mcp --connect 127.0.0.1:7980
 ```
 
 LightCraft ใช้ `--connect` สำหรับ live mode คลังภาพเปิดได้ทีละโปรแกรม ถ้า GUI เปิดคลังภาพนั้นอยู่ ให้ใช้ connect แทนการเปิด `mcp --library` ซ้ำ Headless เปิดคลังภาพของตัวเองและไม่ได้ควบคุมหน้าต่าง GUI

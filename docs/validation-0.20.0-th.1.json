@@ -1,0 +1,288 @@
+{
+  "validatedAt": "2026-11-09T16:25:51.966850+00:00",
+  "thaiVersion": "0.20.0-th.1",
+  "upstreamTag": "v0.20.0",
+  "upstreamCommit": "192ff72923c39e6623f2c7ff67ab3a119deb8071",
+  "catalogs": {
+    "th.json": {
+      "entries": 3844,
+      "referenceKeys": 3807,
+      "thaiScriptValues": 3799
+    },
+    "th-formats.json": {
+      "entries": 336,
+      "referenceKeys": 331,
+      "thaiScriptValues": 322
+    }
+  },
+  "catalogEntries": 4180,
+  "sourceGate": {
+    "platform": "macOS",
+    "sourceCommit": "51f9f2364eaa771dda5fbe6c1ad54a901b42a287",
+    "command": "cargo xtask ci",
+    "status": "passed",
+    "sourceCommitAtCheck": "a641ce265ff91c0d426f24cb0b633fc1d3a9f544",
+    "validatedTree": "69277d34e8d050443be372ade46591b1deb58bc2",
+    "stagedChangesPresent": true,
+    "startedAt": "2026-11-09T14:54:07.368727+00:00",
+    "remoteBuildStarted": false,
+    "upstreamTag": "v0.20.0",
+    "upstreamCommit": "192ff72923c39e6623f2c7ff67ab3a119deb8071",
+    "exitCode": 0,
+    "finishedAt": "2026-11-09T15:37:34.300878+00:00",
+    "commitCreatedAfterPassingGate": true
+  },
+  "sourceGateSummary": {
+    "result": "pass",
+    "command": "cargo xtask ci",
+    "seconds": 2592.773423959,
+    "steps": [
+      {
+        "name": "fmt",
+        "seconds": 4.096090291,
+        "status": "ok"
+      },
+      {
+        "name": "clippy",
+        "seconds": 81.268240708,
+        "status": "ok"
+      },
+      {
+        "name": "heif",
+        "seconds": 373.489509042,
+        "status": "ok"
+      },
+      {
+        "name": "test",
+        "seconds": 1751.989510166,
+        "status": "ok"
+      },
+      {
+        "name": "parity",
+        "seconds": 357.174295083,
+        "status": "ok"
+      },
+      {
+        "name": "layers",
+        "seconds": 0.030322375,
+        "status": "ok"
+      },
+      {
+        "name": "assets",
+        "seconds": 0.037861417,
+        "status": "ok"
+      },
+      {
+        "name": "roots",
+        "seconds": 0.0244095,
+        "status": "ok"
+      },
+      {
+        "name": "wasm",
+        "seconds": 21.224052709,
+        "status": "ok"
+      }
+    ],
+    "recordedSkippedChecks": 159,
+    "skippedChecksByNeed": {
+      "corpus": 148,
+      "fonts": 2,
+      "gpu": 1,
+      "model": 8
+    },
+    "scope": "The full original gate passed; data-dependent skips are recorded separately and are not claimed as executed checks."
+  },
+  "screenshotAssetCheck": {
+    "status": "passed",
+    "command": "cargo xtask assets",
+    "sourceCommitAtCheck": "51f9f2364eaa771dda5fbe6c1ad54a901b42a287",
+    "validatedTree": "b0b04d9c4ffff88c098502270e00cb92e3dd1430",
+    "startedAt": "2026-11-09T15:51:00.741815+00:00",
+    "exitCode": 0,
+    "sourceCommit": "5b2a223d289561675b444d2ad1a201bfc8a4ac61",
+    "commitCreatedAfterPassingGate": true,
+    "finishedAt": "2026-11-09T15:51:02.042090+00:00"
+  },
+  "upstreamTestBaselineCorrection": {
+    "adoptedAt": "2026-11-09T12:31:12.999212+00:00",
+    "upstreamPullRequest": "https://github.com/storytold/lightcraft/pull/3801",
+    "upstreamPatchCommit": "f08f0a7d3a035f27eeefbf55e2d735beb691a74b",
+    "sourceFile": "crates/pipeline/src/tests_light.rs",
+    "scope": "Two test golden constants and their provenance comment; exact equality, platform guard and production rendering are unchanged.",
+    "observedLocalHashes": [
+      "0x483059a3ad92326c",
+      "0x9653aed0ea32aff3"
+    ],
+    "previousExpectedHashes": [
+      "0x5bf0a7c8579f3f34",
+      "0x87a3598c15979e4d"
+    ],
+    "preFixRenderingCrateTreesEqualToUpstreamTag": {
+      "crates/pipeline": "8cec0b1c62f7be86cb90460e03b17aff20a4ec93",
+      "crates/color": "5083a2d2b34a9ef488de6ae5cd5a760d0faec98c",
+      "crates/develop": "aeec82a58219aed7e64f08389c6958ac93967ec5",
+      "crates/scenes": "f43e2fe8ac58e3ba8dd0ed813cca2b15cabcca39",
+      "crates/raster": "7aeb13bd99d0ae00447c7b447798f7a3a6a72fdd"
+    },
+    "upstreamTag": "v0.19.0",
+    "localFailureLogSha256": "91839c1db556d9f5c9a1c62a4dc6c52518f386bbe5cf9f5c6dba9432250f3f77",
+    "independentUpstreamDiagnostic": "https://github.com/storytold/lightcraft/issues/3788#issuecomment-6656473269",
+    "reviewState": "Upstream PR open with an approving review; adopted test-only patch in the independent Thai fork.",
+    "productionCodeChanged": false
+  },
+  "inheritedTestFixtureCorrection": {
+    "recordedAt": "2026-11-09T14:07:17.439587+00:00",
+    "upstreamIssue": "https://github.com/storytold/lightcraft/issues/3799",
+    "duplicateIssue": "https://github.com/storytold/lightcraft/issues/3980",
+    "sourceFile": "crates/ui-egui/src/tests/find_similar.rs",
+    "originalFullSuiteFailure": {
+      "actualSearchThreadReads": 10,
+      "expected": 12,
+      "logSha256": "8168698943a747337af9c2fae1889cecb944e22c96af14de035f89e8445aad92"
+    },
+    "deterministicReproductionExitCode": 101,
+    "deterministicReproduction": {
+      "cachedPhotos": [
+        2,
+        3
+      ],
+      "actualSearchThreadReads": 10,
+      "expected": 12,
+      "logSha256": "0d4bed4babdb31298ae4aa68ae847116f4d4697038ab80ffe806955e5ffd4a3a"
+    },
+    "correction": "Fixture only: explicitly populate two decoded thumbnail sources, clear decoded sources before the resumed search plan, retain completed similarity signatures; preserve exact read/result counts and add no-UI-thread-read assertion. No test quarantine, retries or relaxed assertions.",
+    "productionCodeChanged": false,
+    "productionFileObjectsEqualToUpstreamTag": {
+      "crates/engine/src/cmd/similar.rs": "fd608ac2b7dbf1423e30a0862c2251d5326ec498",
+      "crates/ui-egui/src/find_similar.rs": "d96424317c8d3fd214183f56487d7347c9ce1412",
+      "crates/engine/src/media/cache.rs": "9d74dcf3e37ac9f201f68611a11a05b2ad78b03d"
+    },
+    "correctedFullGateStatus": "passed",
+    "correctedGateCommit": "e63d1020a2ed79f68d865b2934e4b806ef7e2b77",
+    "correctedValidatedTree": "0cdd9f1e106f9a5a07b9ce1ca3a8669df9f53db7",
+    "additionalV020Validation": {
+      "status": "passed",
+      "sourceCommit": "51f9f2364eaa771dda5fbe6c1ad54a901b42a287",
+      "validatedTree": "69277d34e8d050443be372ade46591b1deb58bc2",
+      "command": "cargo xtask ci"
+    }
+  },
+  "macPackaging": {
+    "startedAt": "2026-11-09T15:49:12.822159+00:00",
+    "thaiVersion": "0.20.0-th.1",
+    "sourceBuildCommit": "51f9f2364eaa771dda5fbe6c1ad54a901b42a287",
+    "recipe": "tools/thai/package_dmg.py",
+    "recipeSha256": "60a61aa1d2667519bb1b7ebbbeac5ace19ea5d0218b1ef34705f7caa205ec9ea",
+    "method": "plain HFS+ DMG; internal temporary stage; metadata-free app copy; LightCraft Thai volume",
+    "signature": "ad-hoc",
+    "notarized": false,
+    "status": "passed",
+    "artifact": "lightcraft-0.20.0-th.1-macos-aarch64.dmg",
+    "sha256": "2f4dd16ea38120a4621e701000df8dc1149a3132dc050d5dad872c89d42c45c0",
+    "bytes": 128676878,
+    "mountedAndCopiedCodeSignaturesPassed": true,
+    "executableHashes": {
+      "Contents/MacOS/LightCraft": "f922ce4d71d03c732e0b02e21fe2922ad7d71c57f0139c39b16807ffc4cd5317",
+      "Contents/MacOS/lightcraft-cli": "5e4133a4decf632361686b2474d647a85276feaeb0775345e5804228b7e29803"
+    },
+    "finishedAt": "2026-11-09T15:49:28.859501+00:00"
+  },
+  "compiledThaiCoverage": {
+    "sourceCommit": "51f9f2364eaa771dda5fbe6c1ad54a901b42a287",
+    "sourceCommitAtCheck": "a641ce265ff91c0d426f24cb0b633fc1d3a9f544",
+    "validatedTree": "69277d34e8d050443be372ade46591b1deb58bc2",
+    "platform": "macOS",
+    "command": "cargo xtask ci",
+    "missingMessages": 0,
+    "missingFormats": 0,
+    "missingWhatsNewLines": 698,
+    "scope": "Compiled runtime message and format scan; historical release-note prose is separate.",
+    "commitCreatedAfterPassingGate": true
+  },
+  "mac": {
+    "status": "passed",
+    "artifact": "lightcraft-0.20.0-th.1-macos-aarch64.dmg",
+    "sha256": "2f4dd16ea38120a4621e701000df8dc1149a3132dc050d5dad872c89d42c45c0",
+    "bytes": 128676878,
+    "architecture": "arm64",
+    "cliVersion": "lightcraft-cli 0.20.0-th.1",
+    "guiVersion": "lightcraft 0.20.0-th.1",
+    "mcpTools": 406,
+    "mcpChecks": [
+      "initialize",
+      "tools/list"
+    ],
+    "allMcpToolsExecuted": false,
+    "buildCommit": "51f9f2364eaa771dda5fbe6c1ad54a901b42a287",
+    "signature": "ad-hoc; strict nested-code and bundle verification passed",
+    "notarized": false,
+    "testedOnMacOS": "26.3.1",
+    "checks": {
+      "thaiDefaultNewProfile": true,
+      "savedEnglishPreferenceRespected": true,
+      "thaiPreferenceSurvivesRestart": true,
+      "persistentDemoRatingAndExposureRoundtrip": true,
+      "pngExport": {
+        "sha256": "1a701e8fa2bd679ab55f066b0b27b4fc7dc07e3233e2f9377273edd423df8e80",
+        "bytes": 22084965,
+        "dimensions": [
+          4000,
+          6000
+        ],
+        "format": "PNG"
+      },
+      "nativeWindowScreenshots": true,
+      "nativeMenuKeyboardDispatchTested": false
+    },
+    "screenshotsVisuallyReviewed": true
+  },
+  "windows": {
+    "date": "2026-11-09T16:25:51.857525+00:00",
+    "thaiVersion": "0.20.0-th.1",
+    "sourceCommit": "62f0ea9b24f5f5267117b58f4575fde2349f1b25",
+    "workflowRun": "https://github.com/tapanapon-com/lightcraft-th/actions/runs/42649316069",
+    "nativeWindowsCI": "success",
+    "artifacts": [
+      {
+        "name": "lightcraft-0.20.0-th.1-windows-x64-portable.zip",
+        "sha256": "f284e7b719155f9e8c77ece38b0ae9d63680bc5e619b19ceeb4a4cde59971a73",
+        "bytes": 122809696
+      },
+      {
+        "name": "lightcraft-0.20.0-th.1-windows-x64.msi",
+        "sha256": "d4cee4bcad89bb5b556bf4421954718b86809a37622568f4a7f8315a6bdea82c",
+        "bytes": 99774464
+      }
+    ],
+    "portableExecutables": {
+      "lightcraft.exe": {
+        "machine": "x64",
+        "subsystem": 2,
+        "sha256": "a24f5ab26f6993b271ad86598f5cffdef2fd9fd2ffede4ed565c754f5b87572a"
+      },
+      "lightcraft-cli.exe": {
+        "machine": "x64",
+        "subsystem": 3,
+        "sha256": "2f382a9d7290a59cc4ace38d957da36e77076954655a771c902d335eb8125f7d"
+      }
+    },
+    "mcpTools": 406,
+    "mcpChecks": [
+      "initialize",
+      "tools/list"
+    ],
+    "allMcpToolsExecuted": false,
+    "status": "passed",
+    "manualWindowsGuiTested": false,
+    "limitations": "Unsigned packages. Native Windows CI built both executables and ran CLI/MCP and installer policy checks. Manual Windows GUI editing is not covered."
+  },
+  "limitations": [
+    "Upstream application remains alpha; RAW support varies by camera and compression.",
+    "The source gate includes data-dependent and ignored tests; its recorded skipped-check counts are separate from executed checks.",
+    "Independent native-speaker proofreading of every translated sentence is not claimed.",
+    "Some engine diagnostics and historical What’s New prose remain English; the compiled coverage report lists that prose separately.",
+    "Mac packages are ad-hoc signed without Apple notarization. Windows packages are unsigned.",
+    "Native Windows CLI/MCP and packaging are checked; manual Windows GUI editing is not covered.",
+    "Thai prerelease updates are downloaded manually from the tagged Releases page."
+  ]
+}
