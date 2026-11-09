@@ -4,6 +4,16 @@ LightCraft รุ่นภาษาไทย สำหรับจัดคล�
 
 รุ่นไทย **0.19.0-th.1** ใช้ซอร์สต้นฉบับ **v0.19.0** ที่ commit [`16636c4`](https://github.com/storytold/lightcraft/tree/16636c45a63bff3065a6fd31aecc22a6fc15ca53) เป็นฐาน ซอร์สแอปจริงอยู่ใน repository นี้ รุ่นนี้เป็น prerelease และยังอยู่ในระยะ alpha ตามต้นฉบับ
 
+## ภาพหน้าจอจากแอปไทยจริง
+
+ภาพจากแพ็กเกจ Mac ที่ตรวจแล้ว ใช้คลังภาพสาธิตสังเคราะห์ของแอป ไม่ใช้ภาพส่วนตัว
+
+![LightCraft TH หน้าปรับแต่งภาพภาษาไทย](docs/images/thai/lightcraft-th-editing.png)
+
+![LightCraft TH คลังภาพแบบตาราง](docs/images/thai/lightcraft-th-library.png)
+
+[ภาพการตั้งค่า](docs/images/thai/lightcraft-th-settings.png) · [บันทึกการถ่ายภาพและผลตรวจ](docs/images/thai/capture-0.19.0-th.1.json)
+
 ## ดาวน์โหลดและติดตั้ง
 
 ไฟล์ติดตั้งอยู่ใน **[Releases → v0.19.0-th.1](https://github.com/tapanapon-com/lightcraft-th/releases/tag/v0.19.0-th.1) → Assets** ต้องขยาย Assets เพื่อดูไฟล์ ไม่ใช้ปุ่ม Code → Download ZIP สำหรับติดตั้ง

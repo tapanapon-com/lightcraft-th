@@ -1,0 +1,108 @@
+{
+  "capturedAt": "2026-11-09T14:39:04.377472+00:00",
+  "thaiVersion": "0.19.0-th.1",
+  "sourceCommit": "e63d1020a2ed79f68d865b2934e4b806ef7e2b77",
+  "package": {
+    "name": "lightcraft-0.19.0-th.1-macos-aarch64.dmg",
+    "sha256": "b24c770b17259dce370c9c553b8ae96c6d08c11ae6bda73d88d8d150bc596f3a",
+    "bytes": 128478427
+  },
+  "cliVersion": "lightcraft-cli 0.19.0-th.1",
+  "guiVersion": "lightcraft 0.19.0-th.1",
+  "architecture": "arm64",
+  "testedOnMacOS": "26.3.1",
+  "executables": {
+    "guiSha256": "f351bdb288908ca3f5e6929d32ce0dcbd90540608575f00108a4de3b391d1084",
+    "cliSha256": "78b5d50171e2b0dd3ecac9dda58e1730f5517572f63a13afa3b232efe071b4ba"
+  },
+  "bundle": {
+    "CFBundleVersion": "0.19.0",
+    "CFBundleShortVersionString": "0.19.0",
+    "LightCraftVersion": "0.19.0-th.1",
+    "LightCraftBuildCommit": "e63d1020a2ed79f68d865b2934e4b806ef7e2b77",
+    "CFBundleIdentifier": "ai.storyteller.lightcraft",
+    "LSMinimumSystemVersion": "11.0",
+    "CFBundleLocalizations": [
+      "en",
+      "th",
+      "cs",
+      "de",
+      "es",
+      "fi",
+      "fr",
+      "id",
+      "it",
+      "ja",
+      "ka",
+      "pl",
+      "pt-BR",
+      "ru",
+      "sv",
+      "uk",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ]
+  },
+  "signature": "ad-hoc; strict nested-code and bundle verification passed",
+  "notarized": false,
+  "mcpTools": 406,
+  "mcpChecks": [
+    "initialize",
+    "tools/list"
+  ],
+  "allMcpToolsExecuted": false,
+  "checks": {
+    "thaiDefaultNewProfile": true,
+    "savedEnglishPreferenceRespected": true,
+    "thaiPreferenceSurvivesRestart": true,
+    "persistentDemoRatingAndExposureRoundtrip": true,
+    "pngExport": {
+      "sha256": "1a701e8fa2bd679ab55f066b0b27b4fc7dc07e3233e2f9377273edd423df8e80",
+      "bytes": 22084965,
+      "dimensions": [
+        4000,
+        6000
+      ],
+      "format": "PNG"
+    },
+    "nativeWindowScreenshots": true,
+    "nativeMenuKeyboardDispatchTested": false
+  },
+  "isolatedDemo": true,
+  "personalPhotosOpened": false,
+  "generatedOrRetouchedImages": false,
+  "screenshots": [
+    {
+      "file": "lightcraft-th-editing.png",
+      "sha256": "532e07f998a5fefc0e9d421b16b19162b58cdf5907d1a88320d12b95e9059632",
+      "bytes": 1611343,
+      "dimensions": [
+        2880,
+        1800
+      ]
+    },
+    {
+      "file": "lightcraft-th-library.png",
+      "sha256": "fa762758bb756dfe80a950079c832a41bd13fc782ae65ab0d9528c2d34620c87",
+      "bytes": 2873489,
+      "dimensions": [
+        2880,
+        1800
+      ]
+    },
+    {
+      "file": "lightcraft-th-settings.png",
+      "sha256": "db89e35f47a150bbbf80a357726d65808775fcbf53020181c623fc4c62dc5752",
+      "bytes": 3641411,
+      "dimensions": [
+        2880,
+        1800
+      ]
+    }
+  ],
+  "status": "passed",
+  "visualReviewPassed": true,
+  "visuallyReviewedAt": "2026-11-09T14:39:57.946504+00:00",
+  "visualReviewScope": "All three native screenshots inspected: Thai editing labels and exposure, contiguous photo grid, and readable Thai general settings including library/launch/culling/external editing. No generated UI, retouching or personal photos."
+}
