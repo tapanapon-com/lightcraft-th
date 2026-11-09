@@ -310,7 +310,7 @@ fn scan_source(source: &str) -> Vec<Use> {
 }
 
 /// Every `.rs` file under `dir` that is not a test file, in a stable order.
-fn source_files(dir: &Path, out: &mut Vec<PathBuf>) {
+pub(super) fn source_files(dir: &Path, out: &mut Vec<PathBuf>) {
     let Ok(entries) = fs::read_dir(dir) else { return };
     let mut paths: Vec<PathBuf> = entries.filter_map(|entry| entry.ok().map(|entry| entry.path())).collect();
     paths.sort();

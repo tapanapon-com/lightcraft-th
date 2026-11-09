@@ -1136,19 +1136,20 @@ fn formats_catalog(code: &str) -> BTreeMap<String, String> {
 fn format_messages() -> std::collections::BTreeSet<String> {
     let mut all: std::collections::BTreeSet<String> =
         Locale::ALL.iter().filter(|language| **language != Locale::En).flat_map(|language| formats_catalog(language.code()).into_keys()).collect();
-    let mut dirs = vec![std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("src")];
-    while let Some(dir) = dirs.pop() {
-        for path in std::fs::read_dir(&dir).unwrap().map(|entry| entry.unwrap().path()) {
-            if path.is_dir() {
-                dirs.push(path);
-            } else if path.extension().is_some_and(|ext| ext == "rs") {
-                let source = std::fs::read_to_string(&path).unwrap();
-                let app = test_module_start(&source).map_or(source.as_str(), |at| &source[..at]);
-                all.extend(tr_format_messages(app));
-            }
-        }
+    let mut files = Vec::new();
+    gaps::source_files(&std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("src"), &mut files);
+    for path in files {
+        let source = std::fs::read_to_string(&path).unwrap();
+        let app = test_module_start(&source).map_or(source.as_str(), |at| &source[..at]);
+        all.extend(tr_format_messages(app));
     }
     all
+}
+
+#[test]
+fn format_gap_report_excludes_test_only_messages() {
+    let test_only = concat!("{} of {} (", "no catalog has this)");
+    assert!(!format_messages().contains(test_only), "the English-fallback fixture is not an application message");
 }
 
 /// Where the first inline `#[cfg(test)] mod x { … }` starts. A `#[cfg(test)] mod x;` line only
