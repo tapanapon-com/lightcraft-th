@@ -8,11 +8,6 @@ name: CI (Windows)
 # its wasm, layers, assets and parity steps don't differ by platform. What does is the
 # `cfg(windows)` code (title bar theme, monitor profiles, file handling) and its tests.
 on:
-  push:
-    branches: [main]
-  pull_request:
-    # `labeled`: adding `full-ci` starts it. Other labels skip (see concurrency and the scope job).
-    types: [opened, synchronize, reopened, labeled]
   workflow_dispatch:
 
 permissions:

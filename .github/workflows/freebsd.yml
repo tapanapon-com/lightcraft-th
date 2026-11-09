@@ -5,14 +5,6 @@ name: FreeBSD
 # request: a drifted dependency still shows up within a day, and always before a release ships.
 # PRs that change the FreeBSD workflow or packaging itself still run it.
 on:
-  push:
-    branches: [release]
-  pull_request:
-    paths:
-      - .github/workflows/freebsd.yml
-      - packaging/freebsd/**
-  schedule:
-    - cron: "7 4 * * *"
   workflow_dispatch:
 
 concurrency:
