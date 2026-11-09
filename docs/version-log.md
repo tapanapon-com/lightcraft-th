@@ -1,39 +1,49 @@
-# LightCraft TH — Version Log
+# LightCraft TH Version Log
 
-> เอกสารติดตามต้นฉบับสำหรับโครงการเตรียมแปลไทย ยังไม่มีแอปหรือตัวติดตั้ง TH เผยแพร่
+## 0.20.0-th.1
 
-ตรวจ Release และลิงก์ไฟล์จาก GitHub: **07/11/2026 22:57 ICT** (2026-11-07T15:57:45.414988+00:00 UTC)
+ฐานต้นฉบับ: [v0.20.0](https://github.com/storytold/lightcraft/releases/tag/v0.20.0) เผยแพร่ 9 พฤศจิกายน 2026 ที่ commit `192ff72923c39e6623f2c7ff67ab3a119deb8071` รวมซอร์สทั้ง tag พร้อมประวัติและสัญญาอนุญาตเดิม
 
-## ต้นฉบับ v0.19.0
+### รุ่นภาษาไทยเพิ่มอะไร
 
-[Release Notes ฉบับเต็ม](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) · เผยแพร่ 2026-11-06T20:21:50Z UTC
+- แค็ตตาล็อก 4,180 รายการ: ข้อความทั่วไป 3,844 และข้อความแบบมีตัวแปร 336 รายการ
+- เมนูและการตั้งค่าภาษาไทย โปรไฟล์ใหม่เริ่มไทยและไม่เปลี่ยนตัวเลือกภาษาที่เคยบันทึก
+- เกลาศัพท์ในหน้าตั้งค่า การคัดภาพ และสไลด์โชว์ รวมถึงใช้ “คลังภาพ” ให้ตรงกับงานจัดรูปภาพ ตรวจจากหน้าจอแอปจริงประกอบ
+- แพ็กเกจ Mac Apple Silicon และ Windows x64 พร้อม CLI สำหรับ MCP
+- Mac ใช้ [เครื่องมือแพ็ก DMG รุ่นไทย](../tools/thai/package_dmg.py) ด้วย staging ชั่วคราวภายในเครื่อง ใช้ Python 3.11 ขึ้นไป และตรวจลายเซ็นของแอปทั้งใน DMG และหลังคัดลอกเข้าโฟลเดอร์ทดสอบ
+- ปรับให้ formatter คำนวณเงื่อนไขก่อนขยายตามภาษา เพื่อรักษาเกณฑ์ Clippy เดิม
+- ตัวตรวจอัปเดตชี้ไปยัง repository รุ่นไทย; รุ่น prerelease นี้ยังดาวน์โหลดอัปเดตด้วยตนเองจาก Releases
+- ใช้แพตช์เฉพาะชุดทดสอบจาก [PR ต้นฉบับ #3801](https://github.com/storytold/lightcraft/pull/3801) แยกจาก tag v0.20.0 เพื่อให้ golden hash ตรงกับ dithering ที่ต้นฉบับเพิ่มไว้แล้ว คงการตรวจเทียบทุกบิต โดยแพตช์ทดสอบนี้ไม่เปลี่ยนโค้ดเรนเดอร์จาก tag v0.20.0 หลักฐานสาเหตุอยู่ใน [issue #3788](https://github.com/storytold/lightcraft/issues/3788#issuecomment-6656473269)
+- แก้เฉพาะ fixture ของการทดสอบยกเลิก Find Similar ตามปัญหาที่ต้นฉบับบันทึกใน [#3799](https://github.com/storytold/lightcraft/issues/3799): เตรียมแคชสองภาพเพื่อทำให้เกิดผลนับผิดเดิมได้แน่นอน แล้วล้างเฉพาะ decoded-source cache ก่อนวางแผนค้นหาต่อ คง signature ที่ค้นหาเสร็จไว้และคงการตรวจจำนวนอ่าน/ผลลัพธ์แบบเท่ากันทุกค่า ไม่เปลี่ยนโค้ดค้นหาในแอป
 
-### สิ่งที่เปลี่ยนในรุ่นต้นฉบับ
+### สิ่งที่รวมจากต้นฉบับ
 
-- ใช้ไลบรารี craftlib สำหรับการอ่านไฟล์ CRW — [ต้นทาง](https://github.com/storytold/lightcraft/pull/3503)
-- แก้การเลือกโปรไฟล์เลนส์เมื่อต่อ teleconverter ไม่ให้ใช้โปรไฟล์ของเลนส์เดี่ยวผิดชุด — [ต้นทาง](https://github.com/storytold/lightcraft/pull/3660)
-- ปรับการครอปหลังแก้ความคลาดเลนส์ให้อยู่ภายในภาพที่แก้แล้ว — [ต้นทาง](https://github.com/storytold/lightcraft/pull/3012)
+- นำเข้ามาสก์แบบกลับด้านจาก Lightroom ให้ตรงกับการแก้ไขที่บันทึกไว้ ([ต้นทาง](https://github.com/storytold/lightcraft/pull/3862))
+- ถอนการถอดรหัส ORF แบบบีบอัดระหว่างตรวจสอบที่มาของโค้ด จึงอาจเปิดได้เฉพาะ preview ในบางไฟล์ ([ต้นทาง](https://github.com/storytold/lightcraft/pull/3916))
+- แก้สมดุลสีขาวแบบ Kelvin สำหรับ Fujifilm DNG ที่ผ่าน DxO demosaic ([ต้นทาง](https://github.com/storytold/lightcraft/pull/3887))
+- เพิ่ม film grain จากชั้นผลึกใน process V4 โดยไม่เพิ่มต้นทุนงาน GPU ([ต้นทาง](https://github.com/storytold/lightcraft/pull/3630))
+- แสดงสถานะติดตั้งอัปเดต พร้อมติดตั้งเมื่อออกจากแอปในต้นฉบับ ([ต้นทาง](https://github.com/storytold/lightcraft/pull/3995))
 
-รายการข้างต้นเป็นสรุปบางส่วนจากต้นฉบับ ไม่ใช่ฟีเจอร์ที่ผู้จัดทำเอกสารนี้พัฒนา และยังไม่ได้อ้างว่ารวมอยู่ในแพ็กเกจ TH
+นี่เป็นรายการที่เลือกมาอ่านง่าย รายการทั้งหมดอยู่ใน Release Notes ต้นฉบับ
 
-## ประวัติรุ่นที่ตรวจ
+### ผลตรวจ
 
-| รุ่นต้นฉบับ | เผยแพร่ (UTC) | รายละเอียด |
-| --- | --- | --- |
-| v0.19.0 | 2026-11-06T20:21:50Z | [Release Notes](https://github.com/storytold/lightcraft/releases/tag/v0.19.0) |
-| v0.18.1 | 2026-11-05T01:25:33Z | [Release Notes](https://github.com/storytold/lightcraft/releases/tag/v0.18.1) |
-| v0.18.0 | 2026-11-03T00:54:20Z | [Release Notes](https://github.com/storytold/lightcraft/releases/tag/v0.18.0) |
+- ชุดตรวจเต็มตามต้นฉบับ `cargo xtask ci` ผ่านบน Mac ในเครื่อง ก่อนบันทึกซอร์สที่ตรวจเป็น commit `51f9f2364eaa771dda5fbe6c1ad54a901b42a287` โดยยืนยัน tree ของ commit ตรงกับซอร์สที่ผ่าน รวม fmt, Clippy, HEIF, workspace tests, parity, layers, assets, crate roots และ WASM; โค้ดแอป dependency และทรัพยากรที่ใช้คอมไพล์ยังตรงกับซอร์สที่ตรวจ มีเครื่องมือแพ็ก DMG รุ่นไทยแบบ plain ที่ตรวจแยกโดย mount ไฟล์จริงและตรวจสำเนาหลังคัดลอก รวมถึงเอกสารและภาพประกอบ รายละเอียดและ hash ของเครื่องมืออยู่ในผลตรวจแบบ JSON ด้านล่าง
+- ชุดตรวจบันทึกการข้ามเงื่อนไขทดสอบที่ต้องใช้ข้อมูล/ความสามารถเพิ่มเติม **159** รายการ แยกสรุปตามสาเหตุใน JSON ไม่อ้างว่าการทดสอบที่ถูกข้ามหรือ ignored ได้รันแล้ว
+- เปิดเผยรอบก่อนแก้ fixture: workspace tests เคยล้มเหลวที่ Find Similar ด้วยจำนวนอ่าน 10 แทน 12; การทำซ้ำแบบเตรียมแคชยืนยันสาเหตุ ก่อนแก้เฉพาะ fixture และรันชุดตรวจเต็มผ่าน รายละเอียดอยู่ใน JSON
+- รายงานที่คอมไพล์จากแอป: ขาดคำแปลข้อความทั่วไป **0** และฟอร์แมต **0** รายการ; บันทึกย้อนหลัง What’s New ที่ยังเป็นอังกฤษ **698** บรรทัดแยกรายงาน ไม่รวมเป็นคำอ้างว่าแปลประวัติทั้งหมดแล้ว
+- Mac: ตรวจ DMG ที่ mount จริง ลายเซ็น nested code และ bundle, arm64, ค่าเริ่มต้นไทย, จำตัวเลือกอังกฤษ/ไทยหลังปิดเปิด, ให้ดาว/ปรับการรับแสงและเปิดคลังเดิม, ส่งออก PNG และภาพหน้าจอจริง 3 ภาพ ผ่าน; MCP initialize และ tools/list ยืนยัน **406** เครื่องมือ
+- Windows: native build ของ GUI/CLI, CLI version, MCP initialize และ tools/list ยืนยัน **406** เครื่องมือ, installer policy, โครงสร้าง PE x64, MSI/Portable และ SHA-256 ผ่าน; ยังไม่ได้ทดสอบการแก้ภาพผ่านหน้าจอ Windows ด้วยตนเอง
+- ข้อมูลและ hash แบบเครื่องอ่าน: [validation-0.20.0-th.1.json](validation-0.20.0-th.1.json)
 
-## สถานะรุ่นภาษาไทย
+### ข้อจำกัดและการติดตั้ง
 
-**ยังไม่มี Thai release, จำนวนคำแปล หรือผลทดสอบ native ที่ประกาศสำหรับโครงการนี้** Repository ยังคงเป็นเอกสารและ manifest อ้างอิงต้นทาง ไม่มีการเพิ่มซอร์สแอปหรือสร้างตัวติดตั้ง TH ในการแก้เอกสารรอบนี้
+LightCraft ต้นฉบับยังเป็น alpha การรองรับ RAW แตกต่างตามกล้องและรูปแบบการบีบอัด คำแปลมีร่างช่วยด้วยเครื่องมือและตรวจศัพท์/ตัวเลข/ตัวแปร ยังไม่ได้มีผู้ตรวจภาษาทุกประโยคอย่างอิสระ ข้อความวินิจฉัยจากเอนจินและบันทึกย้อนหลังบางส่วนยังเป็นอังกฤษ
 
-ตรวจ metadata ของ Release และรายการไฟล์ Assets เท่านั้น ไม่ได้ทดสอบเปิดแอปต้นฉบับทุกระบบ ข้อมูลเป็น snapshot; การอัปเดตครั้งถัดไปต้องตรวจต้นทางใหม่
+Mac ใช้ลายเซ็น ad-hoc และไม่ผ่าน Apple notarization; Windows ยังไม่มีลายเซ็นดิจิทัล แพ็กเกจที่ตรวจในรุ่นนี้คือ Mac Apple Silicon และ Windows x64 ยังไม่มีรุ่นไทย Mac Intel / Windows ARM64 ที่ตรวจยืนยัน
 
-[รายละเอียดต้นทาง](../UPSTREAM.md) · [ประวัติเอกสาร](../CHANGELOG.md) · [README](../README.md) · [ต้นฉบับ](https://github.com/storytold/lightcraft)
+[ดาวน์โหลดรุ่นนี้](https://github.com/tapanapon-com/lightcraft-th/releases/tag/v0.20.0-th.1) · [ติดตั้ง Mac / Windows](../README.md) · [ซอร์สและ MCP](localization-th.md)
 
-## English
+## ก่อน 0.20.0-th.1
 
-The current verified upstream release is [v0.19.0](https://github.com/storytold/lightcraft/releases/tag/v0.19.0). The selected Thai summaries above describe upstream work and retain links to its original contributors. This documentation-only repository has no published Thai application or installer. Release metadata and asset links were checked; native runtime coverage is not claimed.
-
-Original application by storytold / ArtCraft. Independent project documentation by Tapanapon / One Per Craft. Original code, asset, font and trademark terms remain with their respective owners.
+Repository นี้เคยมีเฉพาะเอกสารและ manifest อ้างอิงต้นฉบับ ยังไม่มีซอร์สแอปไทยหรือตัวติดตั้ง ไม่ใช่รุ่นแอปภาษาไทยที่เผยแพร่ก่อนหน้านี้
